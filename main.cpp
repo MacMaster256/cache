@@ -47,7 +47,7 @@ int main(){
         unsigned int capacity2=capacity;       
         timer_on = std::chrono::high_resolution_clock::now();
         for(unsigned int i=0; i < 1000 ;i++){
-            for(unsigned int j=0;j < capacity2;j++){
+            while(capacity2 != 0){
                 t=rand()%capacity2;
                 std::swap(array[t],array[capacity2-1]);
                 capacity2--;
@@ -58,12 +58,11 @@ int main(){
         std::cout <<"random :"<< "(cache_size=" << (capacity*4)/1024 << ") (" << "time:" << diff << ") " << std::endl;
         
         
-        
         capacity*=2;
-        if(capacity > MAX_CACHE_SIZE)
+        if(capacity == MAX_CACHE_SIZE)
             capacity = MAX_CACHE_SIZE*3/2;
         delete[] array;    
-    }while(capacity != MAX_CACHE_SIZE*3/2);
+    }while(capacity < MAX_CACHE_SIZE*3/2);
     
     
     
