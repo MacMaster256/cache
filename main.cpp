@@ -49,7 +49,8 @@ int main(){
         for(unsigned int i=0; i < 1000 ;i++){
             for(unsigned int j=0;j < capacity2;j++){
                 t=rand()%capacity2;
-                std::swap(array[t],array[capacity-1]);
+                std::swap(array[t],array[capacity2-1]);
+                capacity2--;
             }
         }
         timer_of = std::chrono::high_resolution_clock::now();
