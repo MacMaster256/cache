@@ -63,7 +63,7 @@ int main(){
         if(capacity > MAX_CACHE_SIZE)
             capacity = MAX_CACHE_SIZE;
         delete[] array;    
-    }while(capacity <= MAX_CACHE_SIZE);
+    }while(capacity != MAX_CACHE_SIZE);
     
     
     
