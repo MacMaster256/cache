@@ -27,10 +27,14 @@ int main(){
         auto timer_of = std::chrono::high_resolution_clock::now();
         auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(timer_of - timer_on).count();
         std::cout <<"direct :"<< "(cache_size=" << (capacity*4)/1024 << ") (" << "time:" << diff << ") " << std::endl;
-
+        delete[] array;
   
         
         //обратный обход
+        array=new int[capacity];
+        for(unsigned int i=0;i<capacity;i++)
+            array[i]=rand()%9;
+       
         timer_on = std::chrono::high_resolution_clock::now();
         for(unsigned int i=0; i < 1000 ;i++){
             for(unsigned int j=capacity-1; j!=0 ;j--){
@@ -40,10 +44,14 @@ int main(){
         timer_of = std::chrono::high_resolution_clock::now();
         diff = std::chrono::duration_cast<std::chrono::milliseconds>(timer_of - timer_on).count();
         std::cout <<"reverse :"<< "(cache_size=" << (capacity*4)/1024 << ") (" << "time:" << diff << ") " << std::endl;
-       
+        delete[] array;
      
         
         //случайный обход
+        array=new int[capacity];
+        for(unsigned int i=0;i<capacity;i++)
+            array[i]=rand()%9;
+        
         unsigned int capacity2=capacity;       
         timer_on = std::chrono::high_resolution_clock::now();
         for(unsigned int i=0; i < 1000 ;i++){
