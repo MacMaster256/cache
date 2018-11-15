@@ -17,4 +17,9 @@
 | №13           | 65536         | 202657        | 216873        | 2070224       |
 
 
+|   graph type  | URL           | 
+| ------------- | ------------- | 
+|  Direct       | http://htmlpreview.github.io/?https://github.com/Shadow-nx/cache/blob/master/direct.html          | 
+|  Reverse      | http://htmlpreview.github.io/?https://github.com/Shadow-nx/cache/blob/master/reverse.html         |
+|  Random       | http://htmlpreview.github.io/?https://github.com/Shadow-nx/cache/blob/master/random.html          |
 
