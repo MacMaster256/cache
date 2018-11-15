@@ -1,4 +1,11 @@
 # cache
+ 
+|   number exp  | Buffer Size   | Direct Time   | Reverse Time  | Random Time   |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| №1            | 16            | 19            | 19            | 21            |
+| №2            | 32            | 38            | 39            | 38            |
+
+
 
 ```
 number of exp: 1 name: Direct time: 19 buffer: 16
